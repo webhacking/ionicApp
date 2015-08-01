@@ -1,0 +1,46 @@
+<style>.isLike{color:red;}</style>
+<ion-view view-title="카카오 스토리">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear ion-android-add-circle button-icon" ng-click="toast()">
+
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-refresher pulling-text="새로고침" on-refresh="refresh()"></ion-refresher>
+    <div class="list card" ng-repeat="s in story">
+      <div class="item item-avatar">
+        <img ng-src="{{s.profile.userImage}}">
+        <h2>{{s.profile.name}}</h2>
+        <p>{{s.content.date | date:'yyyy-MM-dd hh:mm a'}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{s.content.image}}">
+        <p>
+          {{s.content.description}}
+        </p>
+        <p>
+          <a href="#" class="subdued">{{s.content.like}} 좋아요</a>
+          <a href="#" class="subdued">{{s.content.comments}} 댓글</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-click="like(s)" ng-class="{'isLike' : s.content.isLike}">
+          <i class="icon ion-thumbsup"></i>
+          좋아요
+        </a>
+        <a class="tab-item" href="#" ng-click="showReplyBox(s)">
+          <i class="icon ion-chatbox"></i>
+          댓글
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          공유
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

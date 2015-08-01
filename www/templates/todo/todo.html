@@ -1,0 +1,28 @@
+<ion-view view-title="todo">
+  <ion-content>
+    <ion-list can-swipe="listCanSwipe">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="toast" ng-model="toastText">
+        </label>
+        <button class="button button-small" ng-click="toast(toastText)">
+          Submit
+        </button>
+      </div>
+
+      <ion-item ng-repeat="p in people">{{p.name}} {{p.age}}
+
+        <ion-option-button class="button-positive"
+                           ng-click="share(p)">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-info"
+                           ng-click="edit(p)">
+          Edit
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
