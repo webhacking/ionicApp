@@ -1,0 +1,13 @@
+<ion-view view-title="날씨 검색">
+    <ion-content>
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="지역을 입력하세요" ng-model="location">
+            </label>
+            <button class="button button-small button-positive" ng-click="getWeather(location)">
+                검색
+           </button>
+        </div>
+        <h1>{{humidity}}</h1>
+    </ion-content>
+</ion-view>
