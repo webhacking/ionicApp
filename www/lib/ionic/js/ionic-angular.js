@@ -1457,7 +1457,11 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
  * @module ionic
  * @description
  * Ionic automatically takes platform configurations into account to adjust things like what
+<<<<<<< HEAD
  * transition style to use and weather tab icons should show on the top or bottom. For example,
+=======
+ * transition style to use and whether tab icons should show on the top or bottom. For example,
+>>>>>>> origin/master
  * iOS will move forward by transitioning the entering view from right to center and the leaving
  * view from center to left. However, Android will transition with the entering view going from
  * bottom to center, covering the previous view, which remains stationary. It should be noted
@@ -2743,7 +2747,11 @@ IonicModule
    * @ngdoc method
    * @name $ionicNavBarDelegate#showBackButton
    * @description
+<<<<<<< HEAD
    * Set/get weather the {@link ionic.directive:ionNavBackButton} is shown
+=======
+   * Set/get whether the {@link ionic.directive:ionNavBackButton} is shown
+>>>>>>> origin/master
    * (if it exists and there is a previous view that can be navigated to).
    * @param {boolean=} show Whether to show the back button.
    * @returns {boolean} Whether the back button is shown.
@@ -2753,7 +2761,11 @@ IonicModule
    * @ngdoc method
    * @name $ionicNavBarDelegate#showBar
    * @description
+<<<<<<< HEAD
    * Set/get weather the {@link ionic.directive:ionNavBar} is shown.
+=======
+   * Set/get whether the {@link ionic.directive:ionNavBar} is shown.
+>>>>>>> origin/master
    * @param {boolean} show Whether to show the bar.
    * @returns {boolean} Whether the bar is shown.
    */
@@ -4021,7 +4033,11 @@ IonicModule
   /**
    * @ngdoc method
    * @name $ionicSideMenuDelegate#canDragContent
+<<<<<<< HEAD
    * @param {boolean=} canDrag Set weather the content can or cannot be dragged to open
+=======
+   * @param {boolean=} canDrag Set whether the content can or cannot be dragged to open
+>>>>>>> origin/master
    * side menus.
    * @returns {boolean} Whether the content can be dragged to open side menus.
    */
@@ -4029,7 +4045,11 @@ IonicModule
   /**
    * @ngdoc method
    * @name $ionicSideMenuDelegate#edgeDragThreshold
+<<<<<<< HEAD
    * @param {boolean|number=} value Set weather the content drag can only start if it is below a certain threshold distance from the edge of the screen. Accepts three different values:
+=======
+   * @param {boolean|number=} value Set whether the content drag can only start if it is below a certain threshold distance from the edge of the screen. Accepts three different values:
+>>>>>>> origin/master
    *  - If a non-zero number is given, that many pixels is used as the maximum allowed distance from the edge that starts dragging the side menu.
    *  - If true is given, the default number of pixels (25) is used as the maximum allowed distance.
    *  - If false or 0 is given, the edge drag threshold is disabled, and dragging from anywhere on the content is allowed.
@@ -5042,7 +5062,11 @@ function($scope, $element, $attrs, $q, $ionicConfig, $ionicHistory) {
 
 
   self.enableBack = function(shouldEnable, disableReset) {
+<<<<<<< HEAD
     // weather or not the back button show be visible, according
+=======
+    // whether or not the back button show be visible, according
+>>>>>>> origin/master
     // to the navigation and history
     if (arguments.length) {
       isBackEnabled = shouldEnable;
@@ -5534,21 +5558,33 @@ IonicModule.service('$ionicListDelegate', ionic.DelegateService([
   /**
    * @ngdoc method
    * @name $ionicListDelegate#showReorder
+<<<<<<< HEAD
    * @param {boolean=} showReorder Set weather or not this list is showing its reorder buttons.
+=======
+   * @param {boolean=} showReorder Set whether or not this list is showing its reorder buttons.
+>>>>>>> origin/master
    * @returns {boolean} Whether the reorder buttons are shown.
    */
   'showReorder',
   /**
    * @ngdoc method
    * @name $ionicListDelegate#showDelete
+<<<<<<< HEAD
    * @param {boolean=} showDelete Set weather or not this list is showing its delete buttons.
+=======
+   * @param {boolean=} showDelete Set whether or not this list is showing its delete buttons.
+>>>>>>> origin/master
    * @returns {boolean} Whether the delete buttons are shown.
    */
   'showDelete',
   /**
    * @ngdoc method
    * @name $ionicListDelegate#canSwipeItems
+<<<<<<< HEAD
    * @param {boolean=} canSwipeItems Set weather or not this list is able to swipe to show
+=======
+   * @param {boolean=} canSwipeItems Set whether or not this list is able to swipe to show
+>>>>>>> origin/master
    * option buttons.
    * @returns {boolean} Whether the list is able to swipe to show option buttons.
    */
@@ -12163,7 +12199,11 @@ function($timeout, $ionicGesture, $window) {
         }
 
         function getPrimaryScrollAxis(gestureEvt) {
+<<<<<<< HEAD
           // gets weather the user is primarily scrolling on the X or Y
+=======
+          // gets whether the user is primarily scrolling on the X or Y
+>>>>>>> origin/master
           // If a majority of the drag has been on the Y since the start of
           // the drag, but the X has moved a little bit, it's still a Y drag
 
@@ -12351,7 +12391,11 @@ IonicModule
  * }
  * ```
  *
+<<<<<<< HEAD
  * @param {bool=} enable-menu-with-back-views Determines weather the side menu is enabled when the
+=======
+ * @param {bool=} enable-menu-with-back-views Determines whether the side menu is enabled when the
+>>>>>>> origin/master
  * back button is showing. When set to `false`, any {@link ionic.directive:menuToggle} will be hidden,
  * and the user cannot swipe to open the menu. When going back to the root page of the side menu (the
  * page without a back button visible), then any menuToggle buttons will show again, and menus will be
@@ -13310,7 +13354,11 @@ function($timeout, $ionicConfig) {
  * @description
  * A container for view content and any navigational and header bar information. When a view
  * enters and exits its parent {@link ionic.directive:ionNavView}, the view also emits view
+<<<<<<< HEAD
  * information, such as its title, weather the back button should be displayed or not, weather the
+=======
+ * information, such as its title, whether the back button should be displayed or not, whether the
+>>>>>>> origin/master
  * corresponding {@link ionic.directive:ionNavBar} should be displayed or not, which transition the view
  * should use to animate, and which direction to animate.
  *
@@ -13341,7 +13389,11 @@ function($timeout, $ionicConfig) {
  * Views can be cached, which means ***controllers normally only load once***, which may
  * affect your controller logic. To know when a view has entered or left, events
  * have been added that are emitted from the view's scope. These events also
+<<<<<<< HEAD
  * contain data about the view, such as the title and weather the back button should
+=======
+ * contain data about the view, such as the title and whether the back button should
+>>>>>>> origin/master
  * show. Also contained is transition data, such as the transition type and
  * direction that will be or was used.
  *
@@ -13357,12 +13409,20 @@ function($timeout, $ionicConfig) {
  *  <tr>
  *   <td><code>$ionicView.enter</code></td>
  *   <td>The view has fully entered and is now the active view.
+<<<<<<< HEAD
  * This event will fire, weather it was the first load or a cached view.</td>
+=======
+ * This event will fire, whether it was the first load or a cached view.</td>
+>>>>>>> origin/master
  *  </tr>
  *  <tr>
  *   <td><code>$ionicView.leave</code></td>
  *   <td>The view has finished leaving and is no longer the
+<<<<<<< HEAD
  * active view. This event will fire, weather it is cached or destroyed.</td>
+=======
+ * active view. This event will fire, whether it is cached or destroyed.</td>
+>>>>>>> origin/master
  *  </tr>
  *  <tr>
  *   <td><code>$ionicView.beforeEnter</code></td>

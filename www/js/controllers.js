@@ -4,6 +4,7 @@
  */
 (function(angular, window) {
   "use strict";
+<<<<<<< HEAD
 
   window.starterControllers = angular.module('starter.controllers', [])
     .controller('AppCtrl', function($scope, $ionicModal, $timeout, Toast, $http, $window, $log) {
@@ -14,6 +15,10 @@
         console.info('@KSH>> AppCtrl : ', weather);
 
       });
+=======
+  window.starterControllers = angular.module('starter.controllers', [])
+    .controller('AppCtrl', function($scope, $ionicModal, $timeout, Toast, $http, $window, $log) {
+>>>>>>> origin/master
 
       // With the new view caching in Ionic, Controllers are only called
       // when they are recreated or on app start, instead of every page change.
@@ -53,4 +58,10 @@
         }, 1000);
       };
     });
+<<<<<<< HEAD
 }(angular, window));
+=======
+}(angular, window));
+
+
+>>>>>>> origin/master

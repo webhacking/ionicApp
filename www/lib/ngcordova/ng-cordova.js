@@ -3501,7 +3501,11 @@ angular.module('ngCordova.plugins.healthKit', [])
       },
 
       /**
+<<<<<<< HEAD
        * Check weather or not the user granted your app access to a specific HealthKit type.
+=======
+       * Check whether or not the user granted your app access to a specific HealthKit type.
+>>>>>>> origin/master
        * Reference for possible types:
        * https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HealthKit_Constants/
        */

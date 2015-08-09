@@ -2379,7 +2379,11 @@ window.ionic.version = '1.0.1';
      * @ngdoc method
      * @name ionic.Platform#fullScreen
      * @description
+<<<<<<< HEAD
      * Sets weather the app is fullscreen or not (in Cordova).
+=======
+     * Sets whether the app is fullscreen or not (in Cordova).
+>>>>>>> origin/master
      * @param {boolean=} showFullScreen Whether or not to set the app to fullscreen. Defaults to true. Requires `cordova plugin add org.apache.cordova.statusbar`
      * @param {boolean=} showStatusBar Whether or not to show the device's status bar. Defaults to false.
      */
@@ -2541,7 +2545,11 @@ window.ionic.version = '1.0.1';
  * @description
  * On touch devices such as a phone or tablet, some browsers implement a 300ms delay between
  * the time the user stops touching the display and the moment the browser executes the
+<<<<<<< HEAD
  * click. This delay was initially introduced so the browser can know weather the user wants to
+=======
+ * click. This delay was initially introduced so the browser can know whether the user wants to
+>>>>>>> origin/master
  * double-tap to zoom in on the webpage.  Basically, the browser waits roughly 300ms to see if
  * the user is double-tapping, or just tapping on the display once.
  *
@@ -3272,7 +3280,11 @@ ionic.DomUtil.ready(function() {
      *
      * @param func {Function} the function to call
      * @param wait {int} how long to wait before/after to allow function calls
+<<<<<<< HEAD
      * @param immediate {boolean} weather to call immediately or after the wait interval
+=======
+     * @param immediate {boolean} whether to call immediately or after the wait interval
+>>>>>>> origin/master
      */
      debounce: function(func, wait, immediate) {
       var timeout, args, context, timestamp, result;
@@ -3554,7 +3566,11 @@ var keyboardActiveElement;
 var scrollView;
 
 /**
+<<<<<<< HEAD
  * Timer for the setInterval that polls window.innerHeight to determine weather
+=======
+ * Timer for the setInterval that polls window.innerHeight to determine whether
+>>>>>>> origin/master
  * the layout has updated for the keyboard showing/hiding.
  */
 var waitForResizeTimer;
@@ -3724,7 +3740,11 @@ function keyboardInit() {
  * Event handler for 'native.keyboardshow' event, sets keyboard.height to the
  * reported height and keyboard.isOpening to true. Then calls
  * keyboardWaitForResize with keyboardShow or keyboardUpdateViewportHeight as
+<<<<<<< HEAD
  * the callback depending on weather the event was triggered by a focusin or
+=======
+ * the callback depending on whether the event was triggered by a focusin or
+>>>>>>> origin/master
  * an orientationchange.
  */
 function keyboardNativeShow(e) {
@@ -3925,7 +3945,11 @@ function keyboardPreventDefault(e) {
  * quickly.
  *
  * @param {Function} callback the function to call once the window has resized
+<<<<<<< HEAD
  * @param {boolean} isOpening weather the resize is from the keyboard opening
+=======
+ * @param {boolean} isOpening whether the resize is from the keyboard opening
+>>>>>>> origin/master
  * or not
  */
 function keyboardWaitForResize(callback, isOpening) {
@@ -5009,7 +5033,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
   /** Timeout for scrollbar fading */
   __scrollbarFadeTimeout: null,
 
+<<<<<<< HEAD
   /** weather we've tried to wait for size already */
+=======
+  /** whether we've tried to wait for size already */
+>>>>>>> origin/master
   __didWaitForSize: null,
   __sizerTimeout: null,
 
@@ -6326,7 +6354,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
       // Sync scroll position
       self.__publish(scrollLeft, scrollTop, level);
 
+<<<<<<< HEAD
     // Otherwise figure out weather we are switching into dragging mode now.
+=======
+    // Otherwise figure out whether we are switching into dragging mode now.
+>>>>>>> origin/master
     } else {
 
       var minimumTrackingForScroll = self.options.locking ? 3 : 0;
@@ -6379,7 +6411,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // Not touching anymore (when two finger hit the screen there are two touch end events)
     self.__isTracking = false;
 
+<<<<<<< HEAD
     // Be sure to reset the dragging flag now. Here we also detect weather
+=======
+    // Be sure to reset the dragging flag now. Here we also detect whether
+>>>>>>> origin/master
     // the finger has moved fast enough to switch into a deceleration animation.
     if (self.__isDragging) {
 
@@ -6503,7 +6539,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
 
     var self = this;
 
+<<<<<<< HEAD
     // Remember weather we had an animation, then we try to continue based on the current "drive" of the animation
+=======
+    // Remember whether we had an animation, then we try to continue based on the current "drive" of the animation
+>>>>>>> origin/master
     var wasAnimating = self.__isAnimating;
     if (wasAnimating) {
       zyngaCore.effect.Animate.stop(wasAnimating);
@@ -6660,7 +6700,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // How much velocity is required to keep the deceleration running
     self.__minVelocityToKeepDecelerating = self.options.snapping ? 4 : 0.1;
 
+<<<<<<< HEAD
     // Detect weather it's still worth to continue animating steps
+=======
+    // Detect whether it's still worth to continue animating steps
+>>>>>>> origin/master
     // If we are already slow enough to not being user perceivable anymore, we stop the whole process here.
     var verify = function() {
       var shouldContinue = Math.abs(self.__decelerationVelocityX) >= self.__minVelocityToKeepDecelerating ||
@@ -7379,7 +7423,11 @@ ionic.scroll = {
     // Make sure we aren't animating as we slide
     content.classList.remove(ITEM_SLIDING_CLASS);
 
+<<<<<<< HEAD
     // Grab the starting X point for the item (for example, so we can tell weather it is open or closed to start)
+=======
+    // Grab the starting X point for the item (for example, so we can tell whether it is open or closed to start)
+>>>>>>> origin/master
     offsetX = parseFloat(content.style[ionic.CSS.TRANSFORM].replace('translate3d(', '').split(',')[0]) || 0;
 
     // Grab the buttons

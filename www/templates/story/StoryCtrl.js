@@ -3,7 +3,11 @@
  */
 (function(starterControllers){
     "use strict";
+<<<<<<< HEAD
     starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast){
+=======
+    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', function($scope, $ionicPopup, $timeout, $window, Keyboard){
+>>>>>>> origin/master
         $scope.story = [
             {
                 profile : {
@@ -55,7 +59,10 @@
             s.content.like += s.content.isLike ? -1 : 1;
             s.content.isLike = !s.content.isLike;
         };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         $scope.isLike = function(index){
             return $scope.story[index].comments.isLike;
         };
@@ -90,9 +97,31 @@
             });
         };
         $scope.refresh = function(){
+<<<<<<< HEAD
             Toast.show('dfeifeifiefj', 'long', '');
         };
 
+=======
+            $timeout(function(){
+                $scope.story.unshift({
+                    profile : {
+                        name : '원빈',
+                        userImage : 'http://cfile206.uf.daum.net/image/176BF3244C68E0585A83A9'
+                    },
+                    content : {
+                        date : new Date(2015, 8, 20, 11, 50),
+                        description : 'CG는 쓰지 않음요',
+                        image : 'http://i.huffpost.com/gen/3014396/thumbs/o-DEFAULT-570.jpg?5',
+                        like : 8,
+                        comments : 15,
+                        isLike : false
+                    }
+                });
+            }, 1000);
+
+            $scope.$broadcast('scroll.refreshComplete');
+        };
+>>>>>>> origin/master
 
         $window.a = $window.a || {};
         $window.a.$scope = $scope;

@@ -2386,7 +2386,11 @@ window.ionic.version = '1.0.1';
      * @ngdoc method
      * @name ionic.Platform#fullScreen
      * @description
+<<<<<<< HEAD
      * Sets weather the app is fullscreen or not (in Cordova).
+=======
+     * Sets whether the app is fullscreen or not (in Cordova).
+>>>>>>> origin/master
      * @param {boolean=} showFullScreen Whether or not to set the app to fullscreen. Defaults to true. Requires `cordova plugin add org.apache.cordova.statusbar`
      * @param {boolean=} showStatusBar Whether or not to show the device's status bar. Defaults to false.
      */
@@ -2548,7 +2552,11 @@ window.ionic.version = '1.0.1';
  * @description
  * On touch devices such as a phone or tablet, some browsers implement a 300ms delay between
  * the time the user stops touching the display and the moment the browser executes the
+<<<<<<< HEAD
  * click. This delay was initially introduced so the browser can know weather the user wants to
+=======
+ * click. This delay was initially introduced so the browser can know whether the user wants to
+>>>>>>> origin/master
  * double-tap to zoom in on the webpage.  Basically, the browser waits roughly 300ms to see if
  * the user is double-tapping, or just tapping on the display once.
  *
@@ -3279,7 +3287,11 @@ ionic.DomUtil.ready(function() {
      *
      * @param func {Function} the function to call
      * @param wait {int} how long to wait before/after to allow function calls
+<<<<<<< HEAD
      * @param immediate {boolean} weather to call immediately or after the wait interval
+=======
+     * @param immediate {boolean} whether to call immediately or after the wait interval
+>>>>>>> origin/master
      */
      debounce: function(func, wait, immediate) {
       var timeout, args, context, timestamp, result;
@@ -3561,7 +3573,11 @@ var keyboardActiveElement;
 var scrollView;
 
 /**
+<<<<<<< HEAD
  * Timer for the setInterval that polls window.innerHeight to determine weather
+=======
+ * Timer for the setInterval that polls window.innerHeight to determine whether
+>>>>>>> origin/master
  * the layout has updated for the keyboard showing/hiding.
  */
 var waitForResizeTimer;
@@ -3731,7 +3747,11 @@ function keyboardInit() {
  * Event handler for 'native.keyboardshow' event, sets keyboard.height to the
  * reported height and keyboard.isOpening to true. Then calls
  * keyboardWaitForResize with keyboardShow or keyboardUpdateViewportHeight as
+<<<<<<< HEAD
  * the callback depending on weather the event was triggered by a focusin or
+=======
+ * the callback depending on whether the event was triggered by a focusin or
+>>>>>>> origin/master
  * an orientationchange.
  */
 function keyboardNativeShow(e) {
@@ -3932,7 +3952,11 @@ function keyboardPreventDefault(e) {
  * quickly.
  *
  * @param {Function} callback the function to call once the window has resized
+<<<<<<< HEAD
  * @param {boolean} isOpening weather the resize is from the keyboard opening
+=======
+ * @param {boolean} isOpening whether the resize is from the keyboard opening
+>>>>>>> origin/master
  * or not
  */
 function keyboardWaitForResize(callback, isOpening) {
@@ -5016,7 +5040,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
   /** Timeout for scrollbar fading */
   __scrollbarFadeTimeout: null,
 
+<<<<<<< HEAD
   /** weather we've tried to wait for size already */
+=======
+  /** whether we've tried to wait for size already */
+>>>>>>> origin/master
   __didWaitForSize: null,
   __sizerTimeout: null,
 
@@ -6333,7 +6361,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
       // Sync scroll position
       self.__publish(scrollLeft, scrollTop, level);
 
+<<<<<<< HEAD
     // Otherwise figure out weather we are switching into dragging mode now.
+=======
+    // Otherwise figure out whether we are switching into dragging mode now.
+>>>>>>> origin/master
     } else {
 
       var minimumTrackingForScroll = self.options.locking ? 3 : 0;
@@ -6386,7 +6418,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // Not touching anymore (when two finger hit the screen there are two touch end events)
     self.__isTracking = false;
 
+<<<<<<< HEAD
     // Be sure to reset the dragging flag now. Here we also detect weather
+=======
+    // Be sure to reset the dragging flag now. Here we also detect whether
+>>>>>>> origin/master
     // the finger has moved fast enough to switch into a deceleration animation.
     if (self.__isDragging) {
 
@@ -6510,7 +6546,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
 
     var self = this;
 
+<<<<<<< HEAD
     // Remember weather we had an animation, then we try to continue based on the current "drive" of the animation
+=======
+    // Remember whether we had an animation, then we try to continue based on the current "drive" of the animation
+>>>>>>> origin/master
     var wasAnimating = self.__isAnimating;
     if (wasAnimating) {
       zyngaCore.effect.Animate.stop(wasAnimating);
@@ -6667,7 +6707,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // How much velocity is required to keep the deceleration running
     self.__minVelocityToKeepDecelerating = self.options.snapping ? 4 : 0.1;
 
+<<<<<<< HEAD
     // Detect weather it's still worth to continue animating steps
+=======
+    // Detect whether it's still worth to continue animating steps
+>>>>>>> origin/master
     // If we are already slow enough to not being user perceivable anymore, we stop the whole process here.
     var verify = function() {
       var shouldContinue = Math.abs(self.__decelerationVelocityX) >= self.__minVelocityToKeepDecelerating ||
@@ -7386,7 +7430,11 @@ ionic.scroll = {
     // Make sure we aren't animating as we slide
     content.classList.remove(ITEM_SLIDING_CLASS);
 
+<<<<<<< HEAD
     // Grab the starting X point for the item (for example, so we can tell weather it is open or closed to start)
+=======
+    // Grab the starting X point for the item (for example, so we can tell whether it is open or closed to start)
+>>>>>>> origin/master
     offsetX = parseFloat(content.style[ionic.CSS.TRANSFORM].replace('translate3d(', '').split(',')[0]) || 0;
 
     // Grab the buttons
@@ -12554,7 +12602,11 @@ function annotate(fn, strictDi, name) {
  * and its service. Importantly, you can configure what kind of service is created by the `$get`
  * method, or how that service will act. For example, the {@link ng.$logProvider $logProvider} has a
  * method {@link ng.$logProvider#debugEnabled debugEnabled}
+<<<<<<< HEAD
  * which lets you specify weather the {@link ng.$log $log} service will log debug messages to the
+=======
+ * which lets you specify whether the {@link ng.$log $log} service will log debug messages to the
+>>>>>>> origin/master
  * console or not.
  *
  * @param {string} name The name of the instance. NOTE: the provider will be available under `name +
@@ -13983,7 +14035,11 @@ function Browser(window, document, $log, $sniffer) {
   };
 
   /**
+<<<<<<< HEAD
    * Checks weather the url has changed outside of Angular.
+=======
+   * Checks whether the url has changed outside of Angular.
+>>>>>>> origin/master
    * Needs to be exported to be able to check for changes that have been done in sync,
    * as hashchange/popstate events fire in async.
    */
@@ -14847,7 +14903,11 @@ function $TemplateCacheProvider() {
  * The contents are compiled and provided to the directive as a **transclusion function**. See the
  * {@link $compile#transclusion Transclusion} section below.
  *
+<<<<<<< HEAD
  * There are two kinds of transclusion depending upon weather you want to transclude just the contents of the
+=======
+ * There are two kinds of transclusion depending upon whether you want to transclude just the contents of the
+>>>>>>> origin/master
  * directive's element or the entire element:
  *
  * * `true` - transclude the content (i.e. the child nodes) of the directive's element.
@@ -15538,7 +15598,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
        * @param {string=} attrName Optional none normalized name. Defaults to key.
        */
       $set: function(key, value, writeAttr, attrName) {
+<<<<<<< HEAD
         // TODO: decide weather or not to throw an error if "class"
+=======
+        // TODO: decide whether or not to throw an error if "class"
+>>>>>>> origin/master
         //is set through this function since it may cause $updateClass to
         //become unstable.
 
@@ -18022,7 +18086,11 @@ function $HttpProvider() {
      *      caching.
      *    - **timeout** – `{number|Promise}` – timeout in milliseconds, or {@link ng.$q promise}
      *      that should abort the request when resolved.
+<<<<<<< HEAD
      *    - **withCredentials** - `{boolean}` - weather to set the `withCredentials` flag on the
+=======
+     *    - **withCredentials** - `{boolean}` - whether to set the `withCredentials` flag on the
+>>>>>>> origin/master
      *      XHR object. See [requests with credentials](https://developer.mozilla.org/docs/Web/HTTP/Access_control_CORS#Requests_with_credentials)
      *      for more information.
      *    - **responseType** - `{string}` - see
@@ -18930,7 +18998,11 @@ function $InterpolateProvider() {
         }
       }
 
+<<<<<<< HEAD
       // Concatenating expressions makes it hard to reason about weather some combination of
+=======
+      // Concatenating expressions makes it hard to reason about whether some combination of
+>>>>>>> origin/master
       // concatenated values are unsafe to use and could easily lead to XSS.  By requiring that a
       // single expression be used for iframe[src], object[src], etc., we ensure that the value
       // that's used is assigned or constructed by some JS code somewhere that is more testable or
@@ -20036,7 +20108,11 @@ function $LocationProvider() {
    *     change urls where supported. Will fall back to hash-prefixed paths in browsers that do not
    *     support `pushState`.
    *   - **requireBase** - `{boolean}` - (default: `true`) When html5Mode is enabled, specifies
+<<<<<<< HEAD
    *     weather or not a <base> tag is required to be present. If `enabled` and `requireBase` are
+=======
+   *     whether or not a <base> tag is required to be present. If `enabled` and `requireBase` are
+>>>>>>> origin/master
    *     true, and a base tag is not present, an error will be thrown when `$location` is injected.
    *     See the {@link guide/$location $location guide for more information}
    *   - **rewriteLinks** - `{boolean}` - (default: `true`) When html5Mode is enabled,
@@ -21434,9 +21510,15 @@ function getValueOf(value) {
  *      `context`.
  *
  *    The returned function also has the following properties:
+<<<<<<< HEAD
  *      * `literal` – `{boolean}` – weather the expression's top-level node is a JavaScript
  *        literal.
  *      * `constant` – `{boolean}` – weather the expression is made entirely of JavaScript
+=======
+ *      * `literal` – `{boolean}` – whether the expression's top-level node is a JavaScript
+ *        literal.
+ *      * `constant` – `{boolean}` – whether the expression is made entirely of JavaScript
+>>>>>>> origin/master
  *        constant literals.
  *      * `assign` – `{?function(context, value)}` – if the expression is assignable, this will be
  *        set to a function to change its value on the given context.
@@ -21849,7 +21931,11 @@ function $ParseProvider() {
  *
  * - `finally(callback, notifyCallback)` – allows you to observe either the fulfillment or rejection of a promise,
  *   but to do so without modifying the final value. This is useful to release resources or do some
+<<<<<<< HEAD
  *   clean-up that needs to be done weather the promise was rejected or resolved. See the [full
+=======
+ *   clean-up that needs to be done whether the promise was rejected or resolved. See the [full
+>>>>>>> origin/master
  *   specification](https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback) for
  *   more information.
  *
@@ -21897,7 +21983,11 @@ function $ParseProvider() {
  *      // Simulate resolving of promise
  *      deferred.resolve(123);
  *      // Note that the 'then' function does not get called synchronously.
+<<<<<<< HEAD
  *      // This is because we want the promise API to always be async, weather or not
+=======
+ *      // This is because we want the promise API to always be async, whether or not
+>>>>>>> origin/master
  *      // it got called synchronously or asynchronously.
  *      expect(resolvedValue).toBeUndefined();
  *
@@ -24177,7 +24267,11 @@ function $SceDelegateProvider() {
  * The browser's
  * [Same Origin Policy](https://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_XMLHttpRequest)
  * and [Cross-Origin Resource Sharing (CORS)](http://www.w3.org/TR/cors/)
+<<<<<<< HEAD
  * policy apply in addition to this and may further restrict weather the template is successfully
+=======
+ * policy apply in addition to this and may further restrict whether the template is successfully
+>>>>>>> origin/master
  * loaded.  This means that without the right CORS policy, loading templates from a different domain
  * won't work on all browsers.  Also, loading templates from `file://` URL does not work on some
  * browsers.
@@ -25182,7 +25276,11 @@ function urlResolve(url) {
 }
 
 /**
+<<<<<<< HEAD
  * Parse a request URL and determine weather this is a same-origin request as the application document.
+=======
+ * Parse a request URL and determine whether this is a same-origin request as the application document.
+>>>>>>> origin/master
  *
  * @param {string|object} requestUrl The url of the request as a string that will be resolved
  * or a parsed URL object.
@@ -30824,7 +30922,11 @@ var ngIfDirective = ['$animate', function($animate) {
  * In addition, the browser's
  * [Same Origin Policy](https://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_XMLHttpRequest)
  * and [Cross-Origin Resource Sharing (CORS)](http://www.w3.org/TR/cors/)
+<<<<<<< HEAD
  * policy may further restrict weather the template is successfully loaded.
+=======
+ * policy may further restrict whether the template is successfully loaded.
+>>>>>>> origin/master
  * For example, `ngInclude` won't work for cross-domain requests on all browsers and for `file://`
  * access on some browsers.
  *
@@ -31596,7 +31698,11 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    *
    * For instance, the required directive does this to work out if the input has data or not.
    *
+<<<<<<< HEAD
    * The default `$isEmpty` function checks weather the value is `undefined`, `''`, `null` or `NaN`.
+=======
+   * The default `$isEmpty` function checks whether the value is `undefined`, `''`, `null` or `NaN`.
+>>>>>>> origin/master
    *
    * You can override this for input directives whose concept of being empty is different to the
    * default. The `checkboxInputType` directive does this because in its case a value of `false`
@@ -31734,7 +31840,11 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    *
    * In this case, you can run into difficulties if you try to update the ngModel's `$modelValue`
    * programmatically before these debounced/future events have resolved/occurred, because Angular's
+<<<<<<< HEAD
    * dirty checking mechanism is not able to tell weather the model has actually changed or not.
+=======
+   * dirty checking mechanism is not able to tell whether the model has actually changed or not.
+>>>>>>> origin/master
    *
    * The `$rollbackViewValue()` method should be called before programmatically changing the model of an
    * input which may have such events pending. This is important in order to make sure that the
@@ -32384,7 +32494,11 @@ var DEFAULT_REGEXP = /(\s+|^)default(\s+|$)/;
  *     `ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }"`
  *   - `allowInvalid`: boolean value which indicates that the model can be set with values that did
  *     not validate correctly instead of the default behavior of setting the model to undefined.
+<<<<<<< HEAD
  *   - `getterSetter`: boolean value which determines weather or not to treat functions bound to
+=======
+ *   - `getterSetter`: boolean value which determines whether or not to treat functions bound to
+>>>>>>> origin/master
        `ngModel` as getters/setters.
  *   - `timezone`: Defines the timezone to be used to read/write the `Date` instance in the model for
  *     `<input type="date">`, `<input type="time">`, ... . Right now, the only supported value is `'UTC'`,
@@ -34137,7 +34251,11 @@ var ngOptionsMinErr = minErr('ngOptions');
  * ```
  *
  * With the purpose of preserving the selection, the **`track by`** expression is always applied to the element
+<<<<<<< HEAD
  * of the data source (to `item` in this example). To calculate weather an element is selected, we do the
+=======
+ * of the data source (to `item` in this example). To calculate whether an element is selected, we do the
+>>>>>>> origin/master
  * following:
  *
  * 1. Apply **`track by`** to the elements in the array. In the example: `[1, 2]`
@@ -38477,7 +38595,11 @@ var $$UMFP; // reference to $UrlMatcherFactoryProvider
  * Matches URLs against patterns and extracts named parameters from the path or the search
  * part of the URL. A URL pattern consists of a path pattern, optionally followed by '?' and a list
  * of search parameters. Multiple search parameter names are separated by '&'. Search parameters
+<<<<<<< HEAD
  * do not influence weather or not a URL is matched, but their values are passed through into
+=======
+ * do not influence whether or not a URL is matched, but their values are passed through into
+>>>>>>> origin/master
  * the matched parameters returned by {@link ui.router.util.type:UrlMatcher#methods_exec exec}.
  * 
  * Path parameter placeholders can be specified using simple colon/catch-all syntax or curly brace
@@ -38875,8 +38997,13 @@ function Type(config) {
  * @methodOf ui.router.util.type:Type
  *
  * @description
+<<<<<<< HEAD
  * Detects weather a value is of a particular type. Accepts a native (decoded) value
  * and determines weather it matches the current `Type` object.
+=======
+ * Detects whether a value is of a particular type. Accepts a native (decoded) value
+ * and determines whether it matches the current `Type` object.
+>>>>>>> origin/master
  *
  * @param {*} val  The value to check.
  * @param {string} key  Optional. If the type check is happening in the context of a specific
@@ -38930,7 +39057,11 @@ Type.prototype.decode = function(val, key) {
  * @methodOf ui.router.util.type:Type
  *
  * @description
+<<<<<<< HEAD
  * Determines weather two decoded values are equivalent.
+=======
+ * Determines whether two decoded values are equivalent.
+>>>>>>> origin/master
  *
  * @param {*} a  A value to compare against.
  * @param {*} b  A value to compare against.
@@ -39116,7 +39247,11 @@ function $UrlMatcherFactory() {
    * @methodOf ui.router.util.$urlMatcherFactory
    *
    * @description
+<<<<<<< HEAD
    * Defines weather URL matching should be case sensitive (the default behavior), or not.
+=======
+   * Defines whether URL matching should be case sensitive (the default behavior), or not.
+>>>>>>> origin/master
    *
    * @param {boolean} value `false` to match URL in a case sensitive manner; otherwise `true`;
    * @returns {boolean} the current value of caseInsensitive
@@ -39133,7 +39268,11 @@ function $UrlMatcherFactory() {
    * @methodOf ui.router.util.$urlMatcherFactory
    *
    * @description
+<<<<<<< HEAD
    * Defines weather URLs should match trailing slashes, or not (the default behavior).
+=======
+   * Defines whether URLs should match trailing slashes, or not (the default behavior).
+>>>>>>> origin/master
    *
    * @param {boolean=} value `false` to match trailing slashes in URLs, otherwise `true`.
    * @returns {boolean} the current value of strictMode
@@ -39747,7 +39886,11 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * });
    * </pre>
    *
+<<<<<<< HEAD
    * @param {boolean} defer Indicates weather to defer location change interception. Passing
+=======
+   * @param {boolean} defer Indicates whether to defer location change interception. Passing
+>>>>>>> origin/master
             no parameter is equivalent to `true`.
    */
   this.deferIntercept = function (defer) {
@@ -43495,7 +43638,11 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
  * @module ionic
  * @description
  * Ionic automatically takes platform configurations into account to adjust things like what
+<<<<<<< HEAD
  * transition style to use and weather tab icons should show on the top or bottom. For example,
+=======
+ * transition style to use and whether tab icons should show on the top or bottom. For example,
+>>>>>>> origin/master
  * iOS will move forward by transitioning the entering view from right to center and the leaving
  * view from center to left. However, Android will transition with the entering view going from
  * bottom to center, covering the previous view, which remains stationary. It should be noted
@@ -44781,7 +44928,11 @@ IonicModule
    * @ngdoc method
    * @name $ionicNavBarDelegate#showBackButton
    * @description
+<<<<<<< HEAD
    * Set/get weather the {@link ionic.directive:ionNavBackButton} is shown
+=======
+   * Set/get whether the {@link ionic.directive:ionNavBackButton} is shown
+>>>>>>> origin/master
    * (if it exists and there is a previous view that can be navigated to).
    * @param {boolean=} show Whether to show the back button.
    * @returns {boolean} Whether the back button is shown.
@@ -44791,7 +44942,11 @@ IonicModule
    * @ngdoc method
    * @name $ionicNavBarDelegate#showBar
    * @description
+<<<<<<< HEAD
    * Set/get weather the {@link ionic.directive:ionNavBar} is shown.
+=======
+   * Set/get whether the {@link ionic.directive:ionNavBar} is shown.
+>>>>>>> origin/master
    * @param {boolean} show Whether to show the bar.
    * @returns {boolean} Whether the bar is shown.
    */
@@ -46059,7 +46214,11 @@ IonicModule
   /**
    * @ngdoc method
    * @name $ionicSideMenuDelegate#canDragContent
+<<<<<<< HEAD
    * @param {boolean=} canDrag Set weather the content can or cannot be dragged to open
+=======
+   * @param {boolean=} canDrag Set whether the content can or cannot be dragged to open
+>>>>>>> origin/master
    * side menus.
    * @returns {boolean} Whether the content can be dragged to open side menus.
    */
@@ -46067,7 +46226,11 @@ IonicModule
   /**
    * @ngdoc method
    * @name $ionicSideMenuDelegate#edgeDragThreshold
+<<<<<<< HEAD
    * @param {boolean|number=} value Set weather the content drag can only start if it is below a certain threshold distance from the edge of the screen. Accepts three different values:
+=======
+   * @param {boolean|number=} value Set whether the content drag can only start if it is below a certain threshold distance from the edge of the screen. Accepts three different values:
+>>>>>>> origin/master
    *  - If a non-zero number is given, that many pixels is used as the maximum allowed distance from the edge that starts dragging the side menu.
    *  - If true is given, the default number of pixels (25) is used as the maximum allowed distance.
    *  - If false or 0 is given, the edge drag threshold is disabled, and dragging from anywhere on the content is allowed.
@@ -47080,7 +47243,11 @@ function($scope, $element, $attrs, $q, $ionicConfig, $ionicHistory) {
 
 
   self.enableBack = function(shouldEnable, disableReset) {
+<<<<<<< HEAD
     // weather or not the back button show be visible, according
+=======
+    // whether or not the back button show be visible, according
+>>>>>>> origin/master
     // to the navigation and history
     if (arguments.length) {
       isBackEnabled = shouldEnable;
@@ -47572,21 +47739,33 @@ IonicModule.service('$ionicListDelegate', ionic.DelegateService([
   /**
    * @ngdoc method
    * @name $ionicListDelegate#showReorder
+<<<<<<< HEAD
    * @param {boolean=} showReorder Set weather or not this list is showing its reorder buttons.
+=======
+   * @param {boolean=} showReorder Set whether or not this list is showing its reorder buttons.
+>>>>>>> origin/master
    * @returns {boolean} Whether the reorder buttons are shown.
    */
   'showReorder',
   /**
    * @ngdoc method
    * @name $ionicListDelegate#showDelete
+<<<<<<< HEAD
    * @param {boolean=} showDelete Set weather or not this list is showing its delete buttons.
+=======
+   * @param {boolean=} showDelete Set whether or not this list is showing its delete buttons.
+>>>>>>> origin/master
    * @returns {boolean} Whether the delete buttons are shown.
    */
   'showDelete',
   /**
    * @ngdoc method
    * @name $ionicListDelegate#canSwipeItems
+<<<<<<< HEAD
    * @param {boolean=} canSwipeItems Set weather or not this list is able to swipe to show
+=======
+   * @param {boolean=} canSwipeItems Set whether or not this list is able to swipe to show
+>>>>>>> origin/master
    * option buttons.
    * @returns {boolean} Whether the list is able to swipe to show option buttons.
    */
@@ -54201,7 +54380,11 @@ function($timeout, $ionicGesture, $window) {
         }
 
         function getPrimaryScrollAxis(gestureEvt) {
+<<<<<<< HEAD
           // gets weather the user is primarily scrolling on the X or Y
+=======
+          // gets whether the user is primarily scrolling on the X or Y
+>>>>>>> origin/master
           // If a majority of the drag has been on the Y since the start of
           // the drag, but the X has moved a little bit, it's still a Y drag
 
@@ -54389,7 +54572,11 @@ IonicModule
  * }
  * ```
  *
+<<<<<<< HEAD
  * @param {bool=} enable-menu-with-back-views Determines weather the side menu is enabled when the
+=======
+ * @param {bool=} enable-menu-with-back-views Determines whether the side menu is enabled when the
+>>>>>>> origin/master
  * back button is showing. When set to `false`, any {@link ionic.directive:menuToggle} will be hidden,
  * and the user cannot swipe to open the menu. When going back to the root page of the side menu (the
  * page without a back button visible), then any menuToggle buttons will show again, and menus will be
@@ -55348,7 +55535,11 @@ function($timeout, $ionicConfig) {
  * @description
  * A container for view content and any navigational and header bar information. When a view
  * enters and exits its parent {@link ionic.directive:ionNavView}, the view also emits view
+<<<<<<< HEAD
  * information, such as its title, weather the back button should be displayed or not, weather the
+=======
+ * information, such as its title, whether the back button should be displayed or not, whether the
+>>>>>>> origin/master
  * corresponding {@link ionic.directive:ionNavBar} should be displayed or not, which transition the view
  * should use to animate, and which direction to animate.
  *
@@ -55379,7 +55570,11 @@ function($timeout, $ionicConfig) {
  * Views can be cached, which means ***controllers normally only load once***, which may
  * affect your controller logic. To know when a view has entered or left, events
  * have been added that are emitted from the view's scope. These events also
+<<<<<<< HEAD
  * contain data about the view, such as the title and weather the back button should
+=======
+ * contain data about the view, such as the title and whether the back button should
+>>>>>>> origin/master
  * show. Also contained is transition data, such as the transition type and
  * direction that will be or was used.
  *
@@ -55395,12 +55590,20 @@ function($timeout, $ionicConfig) {
  *  <tr>
  *   <td><code>$ionicView.enter</code></td>
  *   <td>The view has fully entered and is now the active view.
+<<<<<<< HEAD
  * This event will fire, weather it was the first load or a cached view.</td>
+=======
+ * This event will fire, whether it was the first load or a cached view.</td>
+>>>>>>> origin/master
  *  </tr>
  *  <tr>
  *   <td><code>$ionicView.leave</code></td>
  *   <td>The view has finished leaving and is no longer the
+<<<<<<< HEAD
  * active view. This event will fire, weather it is cached or destroyed.</td>
+=======
+ * active view. This event will fire, whether it is cached or destroyed.</td>
+>>>>>>> origin/master
  *  </tr>
  *  <tr>
  *   <td><code>$ionicView.beforeEnter</code></td>
