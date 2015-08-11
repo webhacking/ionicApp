@@ -241,11 +241,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * });
    * </pre>
    *
-<<<<<<< HEAD
-   * @param {boolean} defer Indicates weather to defer location change interception. Passing
-=======
    * @param {boolean} defer Indicates whether to defer location change interception. Passing
->>>>>>> origin/master
             no parameter is equivalent to `true`.
    */
   this.deferIntercept = function (defer) {

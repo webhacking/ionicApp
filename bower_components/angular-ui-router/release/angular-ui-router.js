@@ -678,11 +678,7 @@ var $$UMFP; // reference to $UrlMatcherFactoryProvider
  * Matches URLs against patterns and extracts named parameters from the path or the search
  * part of the URL. A URL pattern consists of a path pattern, optionally followed by '?' and a list
  * of search parameters. Multiple search parameter names are separated by '&'. Search parameters
-<<<<<<< HEAD
- * do not influence weather or not a URL is matched, but their values are passed through into
-=======
  * do not influence whether or not a URL is matched, but their values are passed through into
->>>>>>> origin/master
  * the matched parameters returned by {@link ui.router.util.type:UrlMatcher#methods_exec exec}.
  * 
  * Path parameter placeholders can be specified using simple colon/catch-all syntax or curly brace
@@ -1080,13 +1076,8 @@ function Type(config) {
  * @methodOf ui.router.util.type:Type
  *
  * @description
-<<<<<<< HEAD
- * Detects weather a value is of a particular type. Accepts a native (decoded) value
- * and determines weather it matches the current `Type` object.
-=======
  * Detects whether a value is of a particular type. Accepts a native (decoded) value
  * and determines whether it matches the current `Type` object.
->>>>>>> origin/master
  *
  * @param {*} val  The value to check.
  * @param {string} key  Optional. If the type check is happening in the context of a specific
@@ -1140,11 +1131,7 @@ Type.prototype.decode = function(val, key) {
  * @methodOf ui.router.util.type:Type
  *
  * @description
-<<<<<<< HEAD
- * Determines weather two decoded values are equivalent.
-=======
  * Determines whether two decoded values are equivalent.
->>>>>>> origin/master
  *
  * @param {*} a  A value to compare against.
  * @param {*} b  A value to compare against.
@@ -1330,11 +1317,7 @@ function $UrlMatcherFactory() {
    * @methodOf ui.router.util.$urlMatcherFactory
    *
    * @description
-<<<<<<< HEAD
-   * Defines weather URL matching should be case sensitive (the default behavior), or not.
-=======
    * Defines whether URL matching should be case sensitive (the default behavior), or not.
->>>>>>> origin/master
    *
    * @param {boolean} value `false` to match URL in a case sensitive manner; otherwise `true`;
    * @returns {boolean} the current value of caseInsensitive
@@ -1351,11 +1334,7 @@ function $UrlMatcherFactory() {
    * @methodOf ui.router.util.$urlMatcherFactory
    *
    * @description
-<<<<<<< HEAD
-   * Defines weather URLs should match trailing slashes, or not (the default behavior).
-=======
    * Defines whether URLs should match trailing slashes, or not (the default behavior).
->>>>>>> origin/master
    *
    * @param {boolean=} value `false` to match trailing slashes in URLs, otherwise `true`.
    * @returns {boolean} the current value of strictMode
@@ -1969,11 +1948,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * });
    * </pre>
    *
-<<<<<<< HEAD
-   * @param {boolean} defer Indicates weather to defer location change interception. Passing
-=======
    * @param {boolean} defer Indicates whether to defer location change interception. Passing
->>>>>>> origin/master
             no parameter is equivalent to `true`.
    */
   this.deferIntercept = function (defer) {
