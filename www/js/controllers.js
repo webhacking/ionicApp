@@ -20,6 +20,7 @@
           console.info('@KSH>> AppCtrl : ', weather);
       });
 
+
       // Form data for the login modal
       $scope.loginData = {};
 
@@ -52,3 +53,4 @@
       };
     });
 }(angular, window));
+

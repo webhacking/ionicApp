@@ -3,20 +3,35 @@
  */
 (function(app){
     "use strict";
-    app.factory('Weather', ['$http', function($http){
+    app.factory('Weather', ['$http', '$q', function($http, $q){
 
         return {
-            getWeather : function(location){
+            /*getWeather : function(location, func){
+                var deferred = $q.defer();
+
                 var apiUrl2 = 'http://api.openweathermap.org/data/2.5/weather?q='+location;
 
                 $http.get(apiUrl2).success(function(res){
-                    console.info(res);
-                    return res;
+                    deferred.resolve(res);
 
                 }).error(function(err){
-                    console.warn(err);
+                    deferred.reject(err);
                 });
 
+
+                return deferred.promise;
+            },*/
+            getWeather : function(location){
+
+                var apiUrl2 = 'http://api.openweathermap.org/data/2.5/weather?q='+location;
+
+                var pr = $http.get(apiUrl2);
+
+                console.log(pr);
+
+
+
+                return pr;
             }
         };
     }]);
