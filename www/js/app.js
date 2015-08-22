@@ -10,6 +10,7 @@
        * 다른 점이라면 $ionicPlatform.ready는 디바이스의 자원이 준비되었을 때 콜백이 호출되고,
        * $(document).ready()는 DOM이 준비되었을 때 콜백이 호출된다.
        */
+
       $ionicPlatform.ready(function() {
           if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -17,16 +18,25 @@
           if (window.StatusBar) {
             StatusBar.styleDefault();
           }
-
+            var sw = false;
           $ionicPlatform.registerBackButtonAction(function(e){
               e.preventDefault();
 
-              //코드 내용
+              if(sw){
+                  ionic.Platform.exitApp();
+              }else{
+                  Toast.show('한번 더 누르면 종료합니다');
 
-              //ionic.Platform.exitApp(); 앱 종료 코드
+                  sw = true;
+
+                  $timeout(function(){
+                      sw = false;
+                  }, 3000);
+              }
 
           }, 101);
       });
+        window.$ionicPlatform = $ionicPlatform;
 
 
     }).config(function($stateProvider, $urlRouterProvider) {

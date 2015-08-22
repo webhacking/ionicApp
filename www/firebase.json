@@ -1,0 +1,9 @@
+{
+  "firebase": "suho",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

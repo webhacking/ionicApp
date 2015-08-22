@@ -6,28 +6,24 @@
     app.controller('PromiseTestCtrl', ['$scope', '$q', function($scope, $q){
         var promise = borrow();
 
-
         promise.then(function(result){
             console.info('resolved : ', result);
         }, function(rejected){
+
             console.error('rejected : ', rejected);
         });
-
-
-
 
         function borrow(){
             var deferred = $q.defer();
 
-            deferred.resolve(1000);
+            //deferred.resolve(1000);
 
-            //deferred.reject(false);
+            deferred.reject(false);
 
             return deferred.promise;
         }
     }]);
 }());
-
 
 
 /*
