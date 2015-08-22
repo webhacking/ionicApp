@@ -4,14 +4,25 @@
 
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="toast" ng-model="toastText">
+          <input type="text" placeholder="toast" ng-model="text">
         </label>
-        <button class="button button-small" ng-click="toast(toastText)">
+        <button class="button button-small" ng-click="add(text)">
           Submit
         </button>
       </div>
+      <ion-item ng-repeat="data in datas" ng-click="goNextPage(data.name)">{{data.name}}
 
-      <ion-item ng-repeat="p in people" ng-click="goNextPage(p.name, p.age)">{{p.name}} {{p.age}}
+        <ion-option-button class="button-positive"
+                           ng-click="share(data)">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-info"
+                           ng-click="edit(data)">
+          Edit
+        </ion-option-button>
+      </ion-item>
+
+      <!--<ion-item ng-repeat="p in people" ng-click="goNextPage(p.name, p.age)">{{p.name}} {{p.age}}
 
         <ion-option-button class="button-positive"
                            ng-click="share(p)">
@@ -21,7 +32,7 @@
                            ng-click="edit(p)">
           Edit
         </ion-option-button>
-      </ion-item>
+      </ion-item>-->
     </ion-list>
 
   </ion-content>
