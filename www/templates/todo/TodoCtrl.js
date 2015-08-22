@@ -32,11 +32,12 @@
             });
         };
 
-        $scope.goNextPage = function(name){
+        $scope.goNextPage = function(name, age){
             //페이지 이동 코드 파라미터는 유니크한 값
-            $location.search(name);
-            $location.path('/app/todo/detail');
-            console.log('ddd');
+            /*$location.search(name); //search() 에 인자가 있으면 세터 없으면 게터
+            $location.path('/app/todo/detail'); //페이지 이동*/
+
+            $state.go('app.detail', {name : name, age: age});
         };
     });
 }(app));

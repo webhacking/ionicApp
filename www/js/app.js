@@ -74,7 +74,7 @@
               }
             })
             .state('app.detail', {
-                url: "/todo/detail",
+                url: "/todo/detail/:name/:age",
                 views: {
                     'menuContent': {
                         templateUrl: "templates/todo/detail/detail.html",
@@ -102,6 +102,6 @@
             })
 
       /** 위에 해당되는 url이 아닌 곳으로 접근했을 때 아래 url로 리다이렉트 시킨다. */
-        $urlRouterProvider.otherwise('/app/promiseTest');
+        $urlRouterProvider.otherwise('/app/todo');
       });
 }(window));
