@@ -3,13 +3,14 @@
  */
 (function(app){
     "use strict";
-    app.controller('TodoCtrl', function($scope, Toast, $http){
+    app.controller('TodoCtrl', function($scope, Toast, $http, $location, $state){
         $scope.people = [
             {name: 'suho',age: 31},
             {name: 'nayeon', age: 27},
             {name: 'dfefe', age : 30},
             {name: 'afdazf', age: 25}
         ];
+
         $scope.listCanSwipe = true;
 
         $scope.share = function(p){
@@ -30,5 +31,21 @@
                 console.log(err);
             });
         };
+
+        $scope.goNextPage = function(name){
+            //페이지 이동 코드 파라미터는 유니크한 값
+            $location.search(name);
+            $location.path('/app/todo/detail');
+            console.log('ddd');
+        };
     });
 }(app));
+
+
+
+
+
+
+
+
+

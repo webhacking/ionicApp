@@ -11,7 +11,7 @@
         </button>
       </div>
 
-      <ion-item ng-repeat="p in people">{{p.name}} {{p.age}}
+      <ion-item ng-repeat="p in people" ng-click="goNextPage(p.name)">{{p.name}} {{p.age}}
 
         <ion-option-button class="button-positive"
                            ng-click="share(p)">

@@ -73,6 +73,15 @@
                 }
               }
             })
+            .state('app.detail', {
+                url: "/todo/detail",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/todo/detail/detail.html",
+                        controller: 'DetailCtrl'
+                    }
+                }
+            })
             .state('app.weather', {
                 url: '/weather',
                 views: {
