@@ -19,7 +19,7 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <a class="item item-thumbnail-left" href="{{user.link}}">
+        <a class="item item-thumbnail-left" ng-click="link(user.link)">
           <img src="{{user.picture.data.url}}">
           <h2>{{user.name}}</h2>
           <p></p>

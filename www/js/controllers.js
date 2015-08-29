@@ -5,7 +5,7 @@
 (function(angular, window) {
   "use strict";
   window.starterControllers = angular.module('starter.controllers', [])
-    .controller('AppCtrl', function($scope, $ionicModal, $timeout, Toast, $http, $window, $log, User) {
+    .controller('AppCtrl', function($scope, $ionicModal, $timeout, Toast, $http, $window, $log, User, $cordovaInAppBrowser) {
 
       // With the new view caching in Ionic, Controllers are only called
       // when they are recreated or on app start, instead of every page change.
@@ -13,8 +13,21 @@
       // listen for the $ionicView.enter event:
       //$scope.$on('$ionicView.enter', function(e) {
       //});
+
         $scope.user = User.getUser();
-        console.log($scope.user);
+
+        $scope.link = function(link){
+          var options = {
+            location: 'yes',
+            clearcache: 'yes',
+            toolbar: 'no'
+          };
+
+          $cordovaInAppBrowser.open(link, options).then(function(event) {
+                console.log(event);
+          });
+        };
+
 
       $scope.$on('weather', function(e, weather) {
 

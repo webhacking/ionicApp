@@ -1,6 +1,6 @@
 (function(starterControllers){
     "use strict";
-    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast){
+    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', '$ionicPopover', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast, $ionicPopover){
         $scope.story = [
             {
                 profile : {
@@ -105,6 +105,20 @@
             }, 1000);
 
             $scope.$broadcast('scroll.refreshComplete');
+        };
+
+        $ionicPopover.fromTemplateUrl('my-popover.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+
+
+        $scope.openPopover = function($event) {
+            $scope.popover.show($event);
+        };
+        $scope.closePopover = function() {
+            $scope.popover.hide();
         };
 
 

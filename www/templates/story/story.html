@@ -9,10 +9,13 @@
   <ion-content>
     <ion-refresher pulling-text="새로고침" on-refresh="refresh()"></ion-refresher>
     <div class="list card" ng-repeat="s in story">
-      <div class="item item-avatar">
+      <div class="item item-avatar item-icon-right">
         <img ng-src="{{s.profile.userImage}}">
         <h2>{{s.profile.name}}</h2>
         <p>{{s.content.date | date:'yyyy-MM-dd hh:mm a'}}</p>
+
+        <i class="icon ion-ios-arrow-down" style="height:60%" ng-click="openPopover($event)"></i>
+
       </div>
 
       <div class="item item-body">
@@ -44,3 +47,14 @@
     </div>
   </ion-content>
 </ion-view>
+
+<script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">My Popover Title</h1>
+    </ion-header-bar>
+    <ion-content>
+      Hello!
+    </ion-content>
+  </ion-popover-view>
+</script>
