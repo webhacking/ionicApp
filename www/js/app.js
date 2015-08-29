@@ -51,7 +51,7 @@
             .state('login', {
                 url: "/login",
                 views:{
-                    'index': {
+                    '': {
                         templateUrl: "templates/login/login.html",
                         controller : 'LoginCtrl'
                     }
@@ -111,7 +111,8 @@
                 }
             })
 
-      /** 위에 해당되는 url이 아닌 곳으로 접근했을 때 아래 url로 리다이렉트 시킨다. */
+      /** 위에 해당되는 url이 아닌 곳으로 접근했을 때 아래 url로 리다이렉트 시킨다.
+       * 또는 첫페이지를 의미함 */
         $urlRouterProvider.otherwise('/login');
       });
 }(window));
