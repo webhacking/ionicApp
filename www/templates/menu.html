@@ -19,10 +19,10 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <a class="item item-thumbnail-left" href="#">
-          <img src="http://cfile27.uf.tistory.com/original/254ABF4C53A2E1E51E668F">
-          <h2>아이유</h2>
-          <p>암인마 드림</p>
+        <a class="item item-thumbnail-left" href="{{user.link}}">
+          <img src="{{user.picture.data.url}}">
+          <h2>{{user.name}}</h2>
+          <p></p>
         </a>
         <ion-item menu-close ng-click="login()">
           Login

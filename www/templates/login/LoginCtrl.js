@@ -3,7 +3,7 @@
  */
 (function(app) {
     "use strict";
-    app.controller('LoginCtrl', ['$scope', '$state', 'Toast', function ($scope, $state, Toast) {
+    app.controller('LoginCtrl', ['$scope', '$state', 'Toast', 'User', function ($scope, $state, Toast, User) {
         var ref = new Firebase("https://suho.firebaseio.com");
         $scope.login = {
             facebook : function(){
@@ -12,6 +12,7 @@
                         Toast.show('로그인 실패 다시 로그인하세요');
                         console.log("Login Failed!", error);
                     } else {
+                        User.setUser(authData.facebook.cachedUserProfile);
                         $state.go('app.story');
                         console.log("Authenticated successfully with payload:", authData);
                     }
