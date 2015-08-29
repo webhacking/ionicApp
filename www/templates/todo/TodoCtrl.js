@@ -10,6 +10,7 @@
         $scope.data = $firebaseObject(ref);
         $scope.datas = $firebaseArray(ref);
 
+
         $scope.add = function(text){
             $scope.datas.$add({
                 name : text,
@@ -54,6 +55,8 @@
 
             $state.go('app.detail', {name : name});
         };
+
+        window.$scope = $scope;
     });
 }(app));
 

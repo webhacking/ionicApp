@@ -47,6 +47,16 @@
               templateUrl: "templates/menu.html",
               controller: 'AppCtrl'
             })
+
+            .state('login', {
+                url: "/login",
+                views:{
+                    'index': {
+                        templateUrl: "templates/login/login.html",
+                        controller : 'LoginCtrl'
+                    }
+                }
+            })
             .state('app.search', {
               url: "/search",
               views: {
@@ -102,6 +112,6 @@
             })
 
       /** 위에 해당되는 url이 아닌 곳으로 접근했을 때 아래 url로 리다이렉트 시킨다. */
-        $urlRouterProvider.otherwise('/app/todo');
+        $urlRouterProvider.otherwise('/login');
       });
 }(window));
