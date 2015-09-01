@@ -1,14 +1,10 @@
-# ionicApp
-ionic framework 기반의 하이브리드앱 스터디.
+# Ionic Framework Study
 
-터미널에서 아래 명령어를 통해 플러그인을 설치해야한다.
-
-cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
-
-cordova plugin add cordova-plugin-vibration
+# Plugin
+- 토스트 : cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+- 진동 : cordova plugin add cordova-plugin-vibration
 
 # 1주차
-
 - 안드로이드 네이티브 앱의 구성과 동작 및 웹뷰와의 상관 관계
 - 하이브리드앱의 성능과 안드로이드 버전 파편화를 동시에 잡아줄 비책
 
