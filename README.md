@@ -1,5 +1,47 @@
 # Ionic Framework Study
 
+# WebStorm JSLint 및 기타 설정
+1. setting(preferences) - language & frameworks - javascript - Code Quality Tools - JSLint
+2. a browser, console 체크 
+3. predefined 에 전역변수 입력(angular, ionic)
+4. 우측하단 yeoman 아저씨처럼 생긴 아이콘 클릭
+5. Configure Inspections
+6. javascript - general - unresolved javascript function 체크해제
+7. javascript - general - unresolved javascript variable 체크해제
+
+# Angular.js 구조
+1. Module
+2. Controller
+3. Service(Factory, Value, Service, Constant, Provider, Decorator)
+4. Directive
+5. Filter
+
+# Angular Custom Directives
+- ng-click
+- ng-model
+- ng-class
+- ng-src
+- ng-repeat
+
+# Antular Filter
+- date: {{today | date : 'yyyyMMdd hh:mm a'}}
+
+# Ionic Start-kit
+- tabs
+- sidemenu
+- blank
+
+# Ionic Cli
+- ionic run android 
+- ionic serve
+- ionic --lab
+
+# Ionic Component
+- card
+- refresher
+- list
+- sidemenu
+
 # Plugin
 - 토스트 : cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
 - 진동 : cordova plugin add cordova-plugin-vibration
@@ -36,12 +78,18 @@
 - Ionic : popup
 
 # 6주차
+- Native Keyboard
+- Vibration
+- $window
 
 # 7주차
 
 # 8주차
+- $ionicPlatform.registerBackButtonAction(func, priority);
 
 # 9주차
+- Firebase
+- AngularFirebase
 
 # 10주차
 - 페이스북 로그인 구현
