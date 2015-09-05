@@ -45,6 +45,9 @@
 # Plugin
 - 토스트 : cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
 - 진동 : cordova plugin add cordova-plugin-vibration
+- 인앱브라우저 : cordova plugin add org.apache.cordova.inappbrowser
+>아래 태그를 config.xml에 추가
+"'<access origin="*" />'"
 
 # 1주차
 - 안드로이드 네이티브 앱의 구성과 동작 및 웹뷰와의 상관 관계
