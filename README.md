@@ -2,7 +2,7 @@
 
 # 데모 페이지
 <a href="https://suho.firebaseapp.com/" target="_blank">https://suho.firebaseapp.com</a>
-
+[https://suho.firebaseapp.com](https://suho.firebaseapp.com/){:target="_blank"}
 
 # WebStorm JSLint 및 기타 설정
 1. setting(preferences) - language & frameworks - javascript - Code Quality Tools - JSLint
