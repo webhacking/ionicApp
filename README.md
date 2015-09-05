@@ -47,10 +47,6 @@
 - 진동 : cordova plugin add cordova-plugin-vibration
 - 인앱브라우저 : cordova plugin add org.apache.cordova.inappbrowser
 
-> 아래 태그를 config.xml에 추가
-    <access origin="*" />
-
-
 # 1주차
 - 안드로이드 네이티브 앱의 구성과 동작 및 웹뷰와의 상관 관계
 - 하이브리드앱의 성능 향상과 안드로이드 버전 파편화 해결 방법
@@ -99,3 +95,8 @@
 # 10주차
 - 페이스북 로그인 구현
 - $ionicPopover
+
+# 11주 차
+- $ionicModal
+- $firebaseArray
+- firebase 데이터 동기화
