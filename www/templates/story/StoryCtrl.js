@@ -1,7 +1,7 @@
 (function(starterControllers){
     "use strict";
-    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', '$ionicPopover', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast, $ionicPopover){
-        $scope.story = [
+    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', '$ionicPopover', '$ionicModal', '$firebaseArray', 'User', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast, $ionicPopover, $ionicModal, $firebaseArray, User){
+        /*$scope.story = [
             {
                 profile : {
                     name : '아이유',
@@ -44,7 +44,26 @@
                     isLike : false
                 }
             }
-        ];
+        ];*/
+
+        var ref = new Firebase("https://suho.firebaseio.com/story");
+        $scope.story = $firebaseArray(ref);
+        console.log($scope.story);
+
+        /*$scope.story.$add({
+            profile : {
+                name : '아이유',
+                userImage : 'http://cfile27.uf.tistory.com/original/254ABF4C53A2E1E51E668F'
+            },
+            content : {
+                date : new Date(2015, 8, 29, 21, 30, 30),
+                description : '안녕하세요. 아이유입니다. 암인마드림~~~~~',
+                image : 'http://i1.ruliweb.daumcdn.net/uf/original/U01/ruliweb/54D0EA6F401D6C002F',
+                like : 1,
+                comments : 5,
+                isLike : false
+            }
+        });*/
 
 
 
@@ -107,20 +126,70 @@
             $scope.$broadcast('scroll.refreshComplete');
         };
 
+
+
+        /** 팝오버 */
         $ionicPopover.fromTemplateUrl('my-popover.html', {
             scope: $scope
         }).then(function(popover) {
             $scope.popover = popover;
         });
-
-
-        $scope.openPopover = function($event) {
+        var index;
+        $scope.openPopover = function($event, $index) {
             $scope.popover.show($event);
+            index = $index;
         };
         $scope.closePopover = function() {
             $scope.popover.hide();
         };
+        $scope.popoverDelete = function(){
+            $scope.story.$remove(index);
+            $scope.closePopover();
+        };
 
+
+
+
+
+
+
+
+
+
+        $ionicModal.fromTemplateUrl('my-modal.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.modal = modal;
+        });
+
+        $scope.openModal = function(s) {
+            console.log(s.$id);
+            /*var ref = new Firebase("https://suho.firebaseio.com/story");
+            $scope.replies = $firebaseArray(ref).$getRecord(s.$id);
+            */
+
+            var ref = new Firebase("https://suho.firebaseio.com/reply/"+ s.$id);
+            $scope.replies = $firebaseArray(ref);
+            $scope.modal.show();
+        };
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
+
+        $scope.addReply = function(reply){
+            if(!reply.text){
+                return;
+            }
+            var user = User.getUser();
+
+            $scope.replies.$add({
+                reply : reply.text,
+                userImage : user.picture.data.url,
+                name : user.first_name
+            });
+            reply.text = '';
+        };
 
         $window.a = $window.a || {};
         $window.a.$scope = $scope;

@@ -56,6 +56,14 @@
             $state.go('app.detail', {name : name});
         };
 
+        $scope.delete = function(index){
+            $scope.datas.$remove(index);
+            //var array = [];
+            //array.splice(index, 1);
+        };
+
+
+
         window.$scope = $scope;
     });
 }(app));
