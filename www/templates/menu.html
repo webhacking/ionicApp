@@ -20,7 +20,7 @@
     <ion-content>
       <ion-list>
         <a class="item item-thumbnail-left" ng-click="link(user.link)">
-          <img src="{{user.picture.data.url}}">
+          <img ng-src="{{user.picture.data.url}}">
           <h2>{{user.name}}</h2>
           <p></p>
         </a>
@@ -38,6 +38,9 @@
         </ion-item>
         <ion-item menu-close href="#/app/promiseTest">
           PromiseTest
+        </ion-item>
+        <ion-item menu-close href="#/app/contacts">
+          Contacts
         </ion-item>
         <ion-item menu-close ng-if="weather">
           {{weather}}

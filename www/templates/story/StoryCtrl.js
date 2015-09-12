@@ -63,6 +63,48 @@
                 comments : 5,
                 isLike : false
             }
+        });
+        $scope.story.$add({
+            profile : {
+                name : '한지민',
+                userImage : 'http://static-a-timetree.zumst.com/cache/images/530x/?http%3A%2F%2Ftimetree.zumst.com%2F2014%2F06%2F09%2F10%2Fab3be0ecb00c44398d3f0814bd46f757.jpeg'
+            },
+            content : {
+                date : new Date(2015, 8, 26, 10, 30),
+                description : '저의 일상 입니다.',
+                image : 'http://cfile2.uf.tistory.com/original/181E82534DF702942C713A',
+                like : 2,
+                comments : 3,
+                isLike : false
+            }
+        });
+        $scope.story.$add({
+            profile : {
+                name : '김지숙',
+                userImage : 'http://www.etorrent.co.kr/data/mw.cheditor/130608/094d8470a941d97f21fa4af6f7674110_pPPeUfL4FQ9xbbAAgZtTn2lthGDl3.jpg'
+            },
+            content : {
+                date : new Date(2015, 8, 23, 15, 20),
+                description : '레인보우 멤버들과 함께',
+                image : 'http://fimg2.pann.com/new/download.jsp?FileID=30388395',
+                like : 5,
+                comments : 4,
+                isLike : false
+            }
+        });
+        $scope.story.$add({
+            profile : {
+                name : '원빈',
+                userImage : 'http://cfile206.uf.daum.net/image/176BF3244C68E0585A83A9'
+            },
+            content : {
+                date : new Date(2015, 8, 20, 11, 50),
+                description : 'CG는 쓰지 않음요',
+                image : 'http://i.huffpost.com/gen/3014396/thumbs/o-DEFAULT-570.jpg?5',
+                like : 8,
+                comments : 15,
+                isLike : false
+            }
         });*/
 
 
@@ -105,8 +147,8 @@
             });
         };
         $scope.refresh = function(){
-            Toast.show('dfeifeifiefj', 'long', '');
-            $timeout(function(){
+            /*Toast.show('dfeifeifiefj', 'long', '');*/
+            /*$timeout(function(){
                 $scope.story.unshift({
                     profile : {
                         name : '원빈',
@@ -121,7 +163,7 @@
                         isLike : false
                     }
                 });
-            }, 1000);
+            }, 1000);*/
 
             $scope.$broadcast('scroll.refreshComplete');
         };
@@ -143,8 +185,10 @@
             $scope.popover.hide();
         };
         $scope.popoverDelete = function(){
-            $scope.story.$remove(index);
+            Toast.show('지우지마세요. 안지워질꺼지만');
             $scope.closePopover();
+            //$scope.story.$remove(index);
+
         };
 
 
@@ -164,7 +208,7 @@
         });
 
         $scope.openModal = function(s) {
-            console.log(s.$id);
+
             /*var ref = new Firebase("https://suho.firebaseio.com/story");
             $scope.replies = $firebaseArray(ref).$getRecord(s.$id);
             */

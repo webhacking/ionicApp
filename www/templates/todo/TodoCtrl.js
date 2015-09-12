@@ -4,20 +4,18 @@
 (function(app){
     "use strict";
     app.controller('TodoCtrl', function($scope, Toast, $http, $location, $state, $firebaseObject, $firebaseArray){
-        var ref = new Firebase("https://suho.firebaseio.com");
-
-        // download the data into a local object
-        $scope.data = $firebaseObject(ref);
+        var ref = new Firebase("https://suho.firebaseio.com/todo");
         $scope.datas = $firebaseArray(ref);
 
 
-        $scope.add = function(text){
+        $scope.add = function(todo){
+            if(!todo.text){
+                return;
+            }
             $scope.datas.$add({
-                name : text,
-                child : [{
-                    name: 'suho'
-                }]
+                name : todo.text
             });
+            todo.text = '';
         };
 
         /*$scope.people = [

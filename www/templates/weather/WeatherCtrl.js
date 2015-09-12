@@ -3,7 +3,7 @@
  */
 (function(app){
     "use strict";
-    app.controller('WeatherCtrl', ['$scope', '$http', '$rootScope', 'Toast', '$ionicHistory', 'Weather', function($scope, $http, $rootScope, Toast, $ionicHistory, Weather){
+    app.controller('WeatherCtrl', ['$scope', '$http', '$rootScope', 'Toast', '$ionicHistory', 'Weather', '$ionicScrollDelegate', function($scope, $http, $rootScope, Toast, $ionicHistory, Weather, $ionicScrollDelegate){
 
         $scope.getWeather = function(location){
             /*var apiUrl2 = 'http://api.openweathermap.org/data/2.5/weather?q='+location;
@@ -37,6 +37,14 @@
                 var date = new Date(res);
             });
 
+
+
         };
+        $scope.datas = [];
+
+        for(var i=0;i<100000;i++){
+            $scope.datas.push({name : i});
+        }
+        window.$ionicScrollDelegate = $ionicScrollDelegate;
     }]);
 }(app));

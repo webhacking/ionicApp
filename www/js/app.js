@@ -110,9 +110,18 @@
                     }
                 }
             })
+            .state('app.contacts', {
+                url: '/contacts',
+                views: {
+                    'menuContent':{
+                        templateUrl : 'templates/contacts/contacts.html',
+                        controller: 'ContactsCtrl'
+                    }
+                }
+            })
 
       /** 위에 해당되는 url이 아닌 곳으로 접근했을 때 아래 url로 리다이렉트 시킨다.
        * 또는 첫페이지를 의미함 */
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/app/weather');
       });
 }(window));

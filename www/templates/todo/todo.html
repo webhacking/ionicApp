@@ -4,10 +4,10 @@
 
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="toast" ng-model="text">
+          <input type="text" placeholder="할일을 입력하세요" ng-model="todo.text" style="width:100%">
         </label>
-        <button class="button button-small" ng-click="add(text)">
-          Submit
+        <button class="button button-small button-positive button-clear" ng-click="add(todo)">
+          입력
         </button>
       </div>
       <ion-item ng-repeat="data in datas" ng-click="goNextPage(data.name)">{{data.name}}

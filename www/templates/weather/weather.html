@@ -8,6 +8,16 @@
                 검색
            </button>
         </div>
-        <h1>{{humidity}}</h1>
+        <ion-item collection-repeat="data in datas">{{data.name}}
+
+            <ion-option-button class="button-positive"
+                               ng-click="share(data)">
+                Share
+            </ion-option-button>
+            <ion-option-button class="button-info"
+                               ng-click="delete($index)">
+                삭제
+            </ion-option-button>
+        </ion-item>
     </ion-content>
 </ion-view>
