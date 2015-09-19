@@ -4,7 +4,7 @@
  */
 (function(window){
     "use strict";
-    window.app = angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'firebase']).run(function($ionicPlatform, Toast, $timeout) {
+    window.app = angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'firebase']).run(function($ionicPlatform, Toast, $timeout, $ionicHistory) {
       /**
        * $ionicPlatform.ready()는 제이쿼리의 $(document).ready와 비슷한 역할
        * 다른 점이라면 $ionicPlatform.ready는 디바이스의 자원이 준비되었을 때 콜백이 호출되고,
@@ -19,22 +19,27 @@
             StatusBar.styleDefault();
           }
             var sw = false;
+
           $ionicPlatform.registerBackButtonAction(function(e){
               e.preventDefault();
 
-              if(sw){
-                  ionic.Platform.exitApp();
+              if($ionicHistory.backView()){
+                  $ionicHistory.goBack(-1);
               }else{
-                  Toast.show('한번 더 누르면 종료합니다');
+                  if(sw){
+                      ionic.Platform.exitApp();
+                  }else{
+                      Toast.show('한번 더 누르면 종료합니다');
 
-                  sw = true;
+                      sw = true;
 
-                  $timeout(function(){
-                      sw = false;
-                  }, 3000);
+                      $timeout(function(){
+                          sw = false;
+                      }, 3000);
+                  }
               }
-
           }, 101);
+
       });
         window.$ionicPlatform = $ionicPlatform;
 

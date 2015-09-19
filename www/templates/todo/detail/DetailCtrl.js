@@ -3,10 +3,14 @@
  */
 (function(app){
     "use strict";
-    app.controller('DetailCtrl', ['$scope', '$stateParams', '$ionicModal', '$window', function($scope, $stateParams, $ionicModal, $window){
+    app.controller('DetailCtrl', ['$scope', '$stateParams', '$ionicModal', '$window', '$ionicHistory', function($scope, $stateParams, $ionicModal, $window, $ionicHistory){
         var params = $stateParams; // {name : 'suho', age : 31}
         $scope.name = $stateParams.name;
         $scope.age = params.age;
+
+
+
+
 
         $ionicModal.fromTemplateUrl('my-modal.html', {
             scope: $scope,
@@ -34,5 +38,6 @@
         });
 
         $window.$scope = $scope;
+        $window.$ionicHistory = $ionicHistory;
     }]);
 }(app));

@@ -3,7 +3,7 @@
  */
 (function(app){
     "use strict";
-    app.controller('TodoCtrl', function($scope, Toast, $http, $location, $state, $firebaseObject, $firebaseArray){
+    app.controller('TodoCtrl', function($scope, Toast, $http, $location, $state, $firebaseObject, $firebaseArray, $cordovaSocialSharing){
         var ref = new Firebase("https://suho.firebaseio.com/todo");
         $scope.datas = $firebaseArray(ref);
 
@@ -28,7 +28,32 @@
         $scope.listCanSwipe = true;
 
         $scope.share = function(p){
-            alert(p.name + ': '+ p.age);
+            /*$cordovaSocialSharing
+                .shareViaSMS(p.name, '핸드폰번호')
+                .then(function(result) {
+                    console.log(result);
+                }, function(err) {
+                    console.log(err);
+                    // An error occurred. Show a message to the user
+                });*/
+
+
+            //jp.naver.line.android
+            $cordovaSocialSharing
+                .shareVia('com.kakao.talk', p.name, '', '')
+                .then(function(result) {
+                    // Success!
+                    console.log(result);
+                }, function(err) {
+                    console.log(err);
+                    // An error occurred. Show a message to the user
+                });
+
+
+
+            //alert(p.name + ': '+ p.age);
+
+
         };
         $scope.edit = function(p){
             alert(p.name + ': '+ p.age);
@@ -59,6 +84,10 @@
             //var array = [];
             //array.splice(index, 1);
         };
+
+
+
+
 
 
 
